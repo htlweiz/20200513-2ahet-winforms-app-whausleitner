@@ -184,7 +184,7 @@
             this.Controls.Add(this.lblNumber1);
             this.Controls.Add(this.lblTitle);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Basic Math Operations";
             this.ResumeLayout(false);
             this.PerformLayout();
 
