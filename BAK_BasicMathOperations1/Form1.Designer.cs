@@ -37,17 +37,14 @@
             this.lblResult = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.btnSubtract = new System.Windows.Forms.Button();
-            this.btnMultiply = new System.Windows.Forms.Button();
-            this.btnDivide = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(29, 22);
+            this.lblTitle.Location = new System.Drawing.Point(116, 22);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(759, 79);
+            this.lblTitle.Size = new System.Drawing.Size(574, 79);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Einfache Rechenoperationen";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -57,7 +54,7 @@
             this.lblNumber1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumber1.Location = new System.Drawing.Point(24, 139);
             this.lblNumber1.Name = "lblNumber1";
-            this.lblNumber1.Size = new System.Drawing.Size(148, 39);
+            this.lblNumber1.Size = new System.Drawing.Size(110, 39);
             this.lblNumber1.TabIndex = 1;
             this.lblNumber1.Text = "Zahl 1";
             // 
@@ -66,7 +63,7 @@
             this.lblNumber2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumber2.Location = new System.Drawing.Point(24, 200);
             this.lblNumber2.Name = "lblNumber2";
-            this.lblNumber2.Size = new System.Drawing.Size(148, 39);
+            this.lblNumber2.Size = new System.Drawing.Size(110, 39);
             this.lblNumber2.TabIndex = 2;
             this.lblNumber2.Text = "Zahl 2";
             // 
@@ -75,7 +72,7 @@
             this.lblResultType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResultType.Location = new System.Drawing.Point(24, 262);
             this.lblResultType.Name = "lblResultType";
-            this.lblResultType.Size = new System.Drawing.Size(148, 39);
+            this.lblResultType.Size = new System.Drawing.Size(110, 39);
             this.lblResultType.TabIndex = 3;
             this.lblResultType.Text = "Ergebnis";
             // 
@@ -132,48 +129,12 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // btnSubtract
-            // 
-            this.btnSubtract.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubtract.Location = new System.Drawing.Point(555, 141);
-            this.btnSubtract.Name = "btnSubtract";
-            this.btnSubtract.Size = new System.Drawing.Size(66, 62);
-            this.btnSubtract.TabIndex = 9;
-            this.btnSubtract.Text = "-";
-            this.btnSubtract.UseVisualStyleBackColor = true;
-            this.btnSubtract.Click += new System.EventHandler(this.btnSubtract_Click);
-            // 
-            // btnMultiply
-            // 
-            this.btnMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMultiply.Location = new System.Drawing.Point(468, 226);
-            this.btnMultiply.Name = "btnMultiply";
-            this.btnMultiply.Size = new System.Drawing.Size(66, 62);
-            this.btnMultiply.TabIndex = 10;
-            this.btnMultiply.Text = "*";
-            this.btnMultiply.UseVisualStyleBackColor = true;
-            this.btnMultiply.Click += new System.EventHandler(this.btnMultiply_Click);
-            // 
-            // btnDivide
-            // 
-            this.btnDivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDivide.Location = new System.Drawing.Point(555, 226);
-            this.btnDivide.Name = "btnDivide";
-            this.btnDivide.Size = new System.Drawing.Size(66, 62);
-            this.btnDivide.TabIndex = 11;
-            this.btnDivide.Text = "/";
-            this.btnDivide.UseVisualStyleBackColor = true;
-            this.btnDivide.Click += new System.EventHandler(this.btnDivide_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnDivide);
-            this.Controls.Add(this.btnMultiply);
-            this.Controls.Add(this.btnSubtract);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblResult);
@@ -201,9 +162,6 @@
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnSubtract;
-        private System.Windows.Forms.Button btnMultiply;
-        private System.Windows.Forms.Button btnDivide;
     }
 }
 

@@ -59,14 +59,115 @@ namespace BasicMathOperations1
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            // Clear textboxes  and set  focus
-
             txtNumber1.Text = "0";
             txtNumber2.Text = "0";
             lblResultType.Text = "Ergebnis";
             lblResult.Text = "";
             txtNumber1.Focus();
             txtNumber1.SelectAll();
+        }
+
+        private void btnSubtract_Click(object sender, EventArgs e)
+        {
+            int number1, number2;
+            try
+            {
+                number1 = Convert.ToInt32(txtNumber1.Text);
+                number2 = Convert.ToInt32(txtNumber2.Text);
+                lblResult.Text = Convert.ToString(number1 - number2);
+                lblResultType.Text = "Differenz";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Eingabefehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNumber1.Focus();
+                txtNumber1.SelectAll();
+            }
+        }
+
+        private void btnMultiply_Click(object sender, EventArgs e)
+        {
+            int number1, number2;
+            try
+            {
+                number1 = Convert.ToInt32(txtNumber1.Text);
+                number2 = Convert.ToInt32(txtNumber2.Text);
+                lblResult.Text = Convert.ToString(number1 * number2);
+                lblResultType.Text = "Produkt";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Eingabefehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNumber1.Focus();
+                txtNumber1.SelectAll();
+            }
+        }
+
+        private void btnDivide_Click(object sender, EventArgs e)
+        {
+            int number1, number2;
+            double result;
+
+            //// Version 1 - simple handling with MessageBox
+            //try
+            //{
+            //    number1 = Convert.ToInt32(txtNumber1.Text);
+            //    number2 = Convert.ToInt32(txtNumber2.Text);
+
+            //    // test if denominator is equal to 0
+            //    if (number2 == 0)
+            //    {
+            //        lblResultType.Text = "Fehler";
+            //        MessageBox.Show("Division duch 0", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //    else
+            //    {
+            //        result = (double)number1 / number2;
+            //        lblResult.Text = Convert.ToString(result);
+            //        lblResultType.Text = "Quotient";
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message, "Eingabefehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    txtNumber1.Focus();
+            //    txtNumber1.SelectAll();
+            //}
+
+            // Version 2 - Exception handling
+            try
+            {
+                number1 = Convert.ToInt32(txtNumber1.Text);
+                number2 = Convert.ToInt32(txtNumber2.Text);
+
+                // test if denominator is equal to 0
+                if (number2 == 0)
+                {
+                    lblResultType.Text = "Fehler";
+                    // MessageBox.Show("Division duch 0", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw new DivideByZeroException("Der Nenner darf nicht 0 sein!");
+                }
+                else
+                {
+                    result = (double)number1 / number2;
+                    lblResult.Text = Convert.ToString(result);
+                    lblResultType.Text = "Quotient";
+                }
+            }
+            catch (DivideByZeroException ex)
+            {
+                MessageBox.Show(ex.Message, "Division durch Null", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNumber1.Focus();
+                txtNumber1.SelectAll();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Eingabefehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNumber1.Focus();
+                txtNumber1.SelectAll();
+            }
+
+
         }
     }
 }
